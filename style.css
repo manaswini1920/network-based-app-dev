@@ -1,25 +1,43 @@
-header,article,section,main,footer,nav{
-    display: block;
-}
 
 header{
     background-color: black;
 }
-
 nav{
+    margin: 0;
+    overflow: hidden;
+
+}
+header nav ul li {
+    display: inline-block;
     float: right;
-    background-color: black;
-    color: white;
+    color: aliceblue;
+    margin: 13px;
 }
 footer{
     bottom: 0;
-    left: 0;
     width: 100%;
     position: fixed;
     background-color: black;
-    color: aliceblue;
+    color: white;
 }
 main{
-    text-align: justify;
-    position: fixed;
+    text-align: center;
+    padding: 30px;
+}
+header img{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.bar{
+    background-color: green;
+    margin:2px;
+    padding: 10px;
+}
+footer p{
+    margin-left: 30px;
+}
+aside{
+    float: right;
+    margin-top: 40px;
 }
