@@ -1,0 +1,25 @@
+header,article,section,main,footer,nav{
+    display: block;
+}
+
+header{
+    background-color: black;
+}
+
+nav{
+    float: right;
+    background-color: black;
+    color: white;
+}
+footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    color: aliceblue;
+}
+main{
+    text-align: justify;
+    position: fixed;
+}
