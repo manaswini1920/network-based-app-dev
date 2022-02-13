@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p>This is student ejs file</p>
+        <%if(student) {%>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>course</th>
+            </tr>
+            <tr>
+                <th><%=student.id%></th>
+                <th><%=student.name %></th>
+                <th><%=student.course%></th>
+            </tr>
+            
+        </table>
+    <%}else{%>
+        <p>No student to display</p> <%}%>
+    </body>
+</html>

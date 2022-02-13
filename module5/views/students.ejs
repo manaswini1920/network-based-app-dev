@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p>This is studentss ejs file</p>
+        <%if(students.length!==0) {%>
+            <ul>
+                <%students.forEach(name=>{ %>
+                    <li><%=name.name %></li>
+                <%});%>
+            </ul>
+            <%}else{%>
+                <p>No student to display</p> 
+                <%}%>
+    </body>
+</html>
