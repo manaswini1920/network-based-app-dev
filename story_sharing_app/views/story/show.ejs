@@ -1,0 +1,12 @@
+<%-include('../partials/header.ejs')%>
+    <div class="content">
+                    <p><%=story.title %></p>
+                    <p><%=story.content %></p>
+        
+    </div>
+    <form>
+        <button type="submit" formaction="/stories/<%=story.id %>/edit" formmethod="get">Edit</button>
+        <button type="submit" formaction="/stories/<%=story.id%>?_method=DELETE" formmethod="post">Delete</button>
+
+    </form>
+    <%-include('../partials/footer.ejs')%>
