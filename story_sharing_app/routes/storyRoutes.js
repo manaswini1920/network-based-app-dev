@@ -1,22 +1,30 @@
-const express= require('express');
+const express = require('express');
+const controller = require('../controllers/storyController');
+
 const router = express.Router();
-const controller =require('../controllers/storyController.js');
-// GET request // sends all stories to users
-router.get('/',controller.index);
 
-//GET new story html page
-router.get('/new',controller.new);
+//GET /stories: send all stories to the user
 
-//Post : create stories
-router.post('/',controller.create);
-//GET : get stories by id
-router.get('/:id',controller.show);
+router.get('/', controller.index);
 
-//Get edit
-router.get('/:id/edit',controller.edit);
-//update
-router.put('/:id',controller.update);
+//GET /stories/new: send html form for creating a new story
 
-//delete
-router.delete('/:id',controller.delete);
-module.exports=router;
+router.get('/new', controller.new);
+
+//POST /stories: create a new story
+
+router.post('/', controller.create);
+
+//GET /stories/:id: send details of story identified by id
+router.get('/:id', controller.show);
+
+//GET /stories/:id/edit: send html form for editing an exising story
+router.get('/:id/edit', controller.edit);
+
+//PUT /stories/:id: update the story identified by id
+router.put('/:id', controller.update);
+
+//DELETE /stories/:id, delete the story identified by id
+router.delete('/:id', controller.delete);
+
+module.exports = router;
